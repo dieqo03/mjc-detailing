@@ -1,0 +1,38 @@
+MJC Detailing - Landing page y tienda (React + Vite + Tailwind CSS)
+
+PUBLICAR EN INTERNET (sin instalar nada)
+  Usa el otro zip, mjc-detailing-web-para-subir.zip: es la pagina ya compilada.
+  1) Crea tu cuenta gratis en https://app.netlify.com/signup
+  2) Descomprime el zip y abre https://app.netlify.com/drop
+  3) Arrastra la carpeta mjc-detailing-web-para-subir (la que trae index.html suelto)
+  4) Presiona "Make public" (en cuentas nuevas los proyectos parten privados)
+  Los pasos detallados estan en la guia "Como publicar la pagina de MJC Detailing (gratis)".
+
+EDITAR Y PROBAR EN TU COMPUTADOR (opcional)
+  Requisito: Node.js 20.19 o superior (version LTS desde https://nodejs.org).
+  1) Abre una terminal dentro de esta carpeta
+     (en Windows: abre la carpeta, escribe cmd en la barra de direcciones y presiona Enter).
+  2) npm install     (solo la primera vez)
+  3) npm run dev     (se abre el navegador solo en http://localhost:5173)
+  4) npm run build   (crea la carpeta dist/, lista para arrastrar a Netlify)
+  Para detener npm run dev: Ctrl + C en la terminal.
+
+ESTRUCTURA
+  index.html            pagina base: titulo, descripcion, vista previa al compartir, fuentes
+  src/App.jsx           toda la pagina: datos del negocio, productos, servicios y carrito
+  src/main.jsx          arranque de React
+  src/index.css         Tailwind CSS
+  public/images/        38 fotos de productos, logo-principal.webp y og-mjc-detailing.jpg
+  public/favicon.svg    icono de la pestana
+  public/apple-touch-icon.png   icono al guardar la pagina en la pantalla del celular
+
+CAMBIOS FRECUENTES (todo en src/App.jsx)
+  - Productos y precios: arreglo PRODUCTS.
+  - Formatos y promociones: campo options, ej. { label: 'Pack 3 por $2.000', price: 2000 }
+  - Foto de un producto: guarda el archivo en public/images y escribe su nombre en images
+    (en internet importan las mayusculas: el nombre debe ser identico).
+  - Servicios y precios de los packs: arreglo SERVICES. Horario: BUSINESS_HOURS.
+  - Fotos reales de trabajos para la Galeria: arreglo GALLERY_PHOTOS
+    (mientras este vacio, la Galeria muestra el acceso al Instagram).
+  - WhatsApp e Instagram: al inicio del archivo.
+  Con npm run dev abierto, al guardar App.jsx la pagina se actualiza sola.
